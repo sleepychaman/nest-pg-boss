@@ -12,8 +12,8 @@ import { getJobToken } from "./utils";
 @Injectable()
 export class JobService<JobData extends object> {
   constructor(
-    private readonly name: string,
-    private readonly pgBoss: PGBoss,
+    public readonly name: string,
+    public readonly pgBoss: PGBoss,
   ) {}
 
   async send(
